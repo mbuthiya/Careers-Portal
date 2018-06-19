@@ -17,6 +17,9 @@
 
       - pip install -r requirements.txt
 
+    before_script:
+  - psql -c 'create database portal;' -U postgres
+
     script: # => 7
 
       - python manage.py test
