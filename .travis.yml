@@ -1,16 +1,32 @@
-language: python # => 1
+ language: python # => 1
+
     python: # => 2
-      - "2.6"
-      - "2.7"
+
+      - "3.5"
+
+      - "3.6"
+
     services: # => 3
-      - mysql
+
+      - postgresql
+
     env: # => 4
-      -DJANGO=1.8 DB=mysql
+
+      -DJANGO=2.0.9 DB=postgresql
     install: # => 5
+
       - pip install -r requirements.txt
-    before_script: # => 6
-      - mysql -e 'create database test;' -u root
+
+    before_script:
+
+      - psql -c 'create database portal;' -U postgres
+
     script: # => 7
+
       - python manage.py test
 
- 
+    notifications:
+
+      slack: 'moringaschool:u8hH6SAUSdH2imWTFwM2e03G'
+      on_success: never # default: always
+      on_failure: always # default: always
