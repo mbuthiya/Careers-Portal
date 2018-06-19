@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portal',
-        'USER': config("POSTGRES-USER"),
-    'PASSWORD':config("POSTGRES-PASSWORD"),
+        'USER': config("POSTGRES_USER"),
+    'PASSWORD':config("POSTGRES_PASSWORD"),
     }
 }
 

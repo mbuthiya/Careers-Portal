@@ -5,6 +5,8 @@ install:
   - pip install -r requirements.txt
 services:
   - postgresql
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
 notifications:
     slack: moringaschool:u8hH6SAUSdH2imWTFwM2e03G
     on_success: false # default: always
