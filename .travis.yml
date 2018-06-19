@@ -18,8 +18,15 @@
       - pip install -r requirements.txt
 
     before_script:
-  - psql -c 'create database portal;' -U postgres
+
+      - psql -c 'create database portal;' -U postgres
 
     script: # => 7
 
       - python manage.py test
+
+    notifications:
+
+      slack: 'moringaschool:u8hH6SAUSdH2imWTFwM2e03G'
+      on_success: never # default: always
+      on_failure: always # default: always
