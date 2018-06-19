@@ -3,5 +3,11 @@ python:
   - "3.6"
 install:
   - pip install -r requirements.txt
+services:
+  - postgresql
+notifications:
+    slack: moringaschool:u8hH6SAUSdH2imWTFwM2e03G
+    on_success: false # default: always
+    on_failure: always # default: always
 script:
   - python3.6 manage.py test # or py.test for Python versions 3.5 and below
