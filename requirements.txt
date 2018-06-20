@@ -1,5 +1,7 @@
 coverage==4.5.1
 Django==2.0.6
+django-cleanup==2.1.0
+Pillow==5.1.0
 psycopg2-binary==2.7.5
 python-decouple==3.1
 pytz==2018.4
