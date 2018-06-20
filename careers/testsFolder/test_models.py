@@ -11,7 +11,7 @@ class JobTest(TestCase):
     Test class that will test for a Job to make  sure its valid
     """
 
-    image_upload = SimpleUploadedFile(name = 'test.jpg',content=open('careers/tests/test.jpg',"rb").read(),content_type='image/jpg')
+    image_upload = SimpleUploadedFile(name = 'test.jpg',content=open('careers/testsFolder/test.jpg',"rb").read(),content_type='image/jpg')
 
 
     def setUp(self):
@@ -59,7 +59,7 @@ class LocationTest(TestCase):
     """
 
     # Add test Image Upload
-    image_upload = SimpleUploadedFile(name = 'test.jpg',content=open('careers/tests/test.jpg',"rb").read(),content_type='image/jpeg')
+    image_upload = SimpleUploadedFile(name = 'test.jpg',content=open('careers/testsFolder/test.jpg',"rb").read(),content_type='image/jpeg')
 
 
     def setUp(self):
@@ -101,7 +101,7 @@ class ApplicationTest(TestCase):
     Test class that will test for a user application o make  sure its valid
     """
 
-    image_upload = SimpleUploadedFile(name = 'test.jpg',content=open('careers/tests/test.jpg',"rb").read(),content_type='image/jpeg')
+    image_upload = SimpleUploadedFile(name = 'test.jpg',content=open('careers/testsFolder/test.jpg',"rb").read(),content_type='image/jpeg')
 
 
     def setUp(self):
