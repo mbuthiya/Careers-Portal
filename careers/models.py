@@ -43,7 +43,7 @@ class Application(models.Model):
     email = models.EmailField()
     gender=models.CharField(max_length=10)
     passport_photo = models.ImageField(upload_to='passport')
-    phone_number = models.IntegerField()
+    phone_number = models.CharField(max_length=10)
     programming_languages=models.TextField()
     curriculum_vitae = models.URLField()
     cover_letter = models.URLField()
